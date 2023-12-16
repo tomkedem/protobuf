@@ -12,7 +12,7 @@ emp.IsRetired = false;
 var birthdate=new DateTime(1975,9,20);
 birthdate=DateTime.SpecifyKind(birthdate, DateTimeKind.Utc);
 emp.BirthDate=Timestamp.FromDateTime(birthdate);
-
+emp.Age =28;
 emp.MaritalStatus = Employee.Types.MaritalStatus.Married;
 emp.PreviousEmployers.Add("Microsoft");
 emp.PreviousEmployers.Add("HP");
