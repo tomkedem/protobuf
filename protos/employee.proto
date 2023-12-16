@@ -15,7 +15,7 @@ message Employee {
   string last_name=3;
   bool is_retired=4;
   //google.protobuf.Timestamp birth_date=5;   
-  
+
   oneof birth_data{
     google.protobuf.Timestamp birth_date=5;
     int32 age=9;
@@ -30,7 +30,7 @@ message Employee {
     OTHER=3;
   }
   MaritalStatus marital_status=8;
-
+  map<string, string> relatives=10;
 }
 
 message Address {
