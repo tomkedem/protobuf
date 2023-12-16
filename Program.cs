@@ -17,6 +17,11 @@ emp.MaritalStatus = Employee.Types.MaritalStatus.Married;
 emp.PreviousEmployers.Add("Microsoft");
 emp.PreviousEmployers.Add("HP");
 
+emp.CurrentAddress = new Address();
+emp.CurrentAddress.City="New York";
+emp.CurrentAddress.StreetName="5th Aveue";
+emp.CurrentAddress.HouseNumber=42;
+
 using (var output = File.Create("emp.dat"))
 {
     emp.WriteTo(output);
