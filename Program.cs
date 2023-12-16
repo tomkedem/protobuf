@@ -22,11 +22,14 @@ emp.CurrentAddress.City="New York";
 emp.CurrentAddress.StreetName="5th Aveue";
 emp.CurrentAddress.HouseNumber=42;
 
+emp.Relatives.Add("father", "John");
+emp.Relatives.Add("mother", "Hanna");
+emp.Relatives.Add("brother", "Dirk");
+
 using (var output = File.Create("emp.dat"))
 {
     emp.WriteTo(output);
 }
-
 
 Employee empFromFile;
 using (var input = File.OpenRead("emp.dat"))
